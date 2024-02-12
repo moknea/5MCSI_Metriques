@@ -5,7 +5,12 @@ from datetime import datetime
 from urllib.request import urlopen
 import sqlite3
                                                                                                                                   
-app = Flask(__name__)                                                                                                                  
+app = Flask(__name__)
+
+@app.route("/Commits/")
+def MatroisiemeAPI():
+   return "<h2>Nombre de commits pour ce projet</h2>"
+  
 @app.route("/contact/")
 def MaPremiereAPI():
     return render_template('contact.html')  
