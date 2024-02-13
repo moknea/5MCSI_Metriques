@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/Commits/")
 def MatroisiemeAPI():
-   return "<h2>Nombre de commits pour ce projet</h2>"
+   return render_template('commits.html')  
   
 @app.route("/contact/")
 def MaPremiereAPI():
