@@ -11,6 +11,10 @@ app = Flask(__name__)
 def MatroisiemeAPI():
    return render_template('commits.html')  
 
+app.route("/histogramme/")
+def histogramme():
+   return render_template('histogramme.html')
+
 @app.route('/paris/')
 def meteo():
     response = urlopen('https://samples.openweathermap.org/data/2.5/forecast?lat=0&lon=0&appid=xxx')
