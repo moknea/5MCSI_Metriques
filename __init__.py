@@ -11,7 +11,7 @@ app = Flask(__name__)
 def MatroisiemeAPI():
    return render_template('commits.html')  
 
-app.route("/histogramme/")
+@app.route("/histogramme/")
 def histogramme():
    return render_template('histogramme.html')
 
